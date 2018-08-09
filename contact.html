@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Contact Us</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <link href="restaurantStyles.css" rel="stylesheet" type="text/css" />
+    <style>
+    #title3 {
+      font-family: verdana;
+      text-align: center;
+    }
+    #contact {
+      font-family: courier;
+    }
+    </style>
+    <script>
+    function validateForm() {
+        var z = document.forms["contactInfo"]["phone"].value;
+        var y = document.forms["contactInfo"]["email"].value;
+        var x = document.forms["contactInfo"]["name"].value;
+        if (x == "") {
+            alert("Please enter your name");
+            return false;
+        }
+        else if (y == "") {
+          alert("Please enter your email");
+          return false;
+        }
+        else if (z == "") {
+          alert("Please enter your phone number");
+          return false;
+        }
+        else {
+          alert("All required fields have been filled")
+          return false;
+        }
+}
+
+    </script>
+  </head>
+
+  <body>
+    <div id="title3"><h1>Quadruple Bypass</h1></div>
+      <div id="nav"><hr/>
+        <ul class="nav nav-pills">
+        <li class="nav-item"><a href="home.html">
+          <span class="glyphicon glyphicon-home"></span>
+        </a></li>
+          <li class="nav-item" ><a class="nav-link" href="menu.html">Menu</a></li>
+          <li class="nav-item" ><a class="nav-link active" href="contact.html">Contact Us</a></li>
+        </ul></div>
+      <hr/>
+
+      <div id="contact">
+          <noscript>This site is best viewed with JavaScript enabled</noscript>
+          <form name="contactInfo" action="/action_page.php" onsubmit="return validateForm()" method="post">
+            <div class="form-group">
+              <label for="name">Name:</label>
+              <input type="name" class="form-control" id="name" placeholder="Enter name" name="name">
+            </div>
+      <div class="form-group">
+        <label for="email">Email:</label>
+        <input type="email" class="form-control" id="email" placeholder="Enter email" name="email">
+      </div>
+      <div class="form-group">
+        <label for="phone">Phone:</label>
+        <input type="phone" class="form-control" id="phone" placeholder="Enter phone number" name="phone">
+      </div>
+</div>
+        <label for="inquiry">Reason for Inquiry</label><br/>
+        <select id="inquiry" name="inquiry">
+          <option value="catering" selected>Catering</option>
+          <option value="privateParty">Private Party</option>
+          <option value="feedback">Feedback</option>
+          <option value="other">Other</option>
+        </select><br/>
+          <label for="info">Additional Information</label><br/>
+          <textarea id="info"></textarea><br/>
+          <fieldset>
+            <ledgend>Have you been here before?</ledgend><br/>
+            <input type="radio" id="choice1" name="haveYou" value="yes">
+            <label for="choice1">Yes</label><br/>
+            <input type="radio" id="choice2" name="haveYou" value="no">
+            <label for="choice2">No</label><br/>
+          </fieldset>
+          <fieldset>
+            <ledgend>Best days to contact you:</ledgend><br/>
+            <input type="checkbox" id="m" name="contact" value="m">
+            <label for="m">M</label><br/>
+            <input type="checkbox" id="t" name="contact" value="t">
+            <label for="t">T</label><br/>
+            <input type=checkbox id="w" name="contact" value="w">
+            <label for="w">W</label><br/>
+            <input type="checkbox" id="th" name="contact" value="th">
+            <label for="th">Th</label><br/>
+            <input type="checkbox" id="f" name="contact" value="f">
+            <label for="f">F</label><br/>
+          </fieldset>
+          <input type="submit" class="btn btn-default" value="submit">
+</form>
+        </div>
+
+          <hr/>
+          <footer>1481 S Shelby St, Louisville, KY 40217<br/>
+                  (555) 098-7654
+          </footer>
+
+  </body>
+</html>
